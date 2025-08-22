@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<link rel="manifest" href="app-manifest.json">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="TAHA School">
-<link rel="apple-touch-icon" href="logo.png">
-<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="TAHA School">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <!-- Add viewport meta tag for better mobile experience -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>TAHA School Management System</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <style>
@@ -797,6 +801,335 @@ canvas {
 .clv-tab-content.active {
     display: block;
 }
+	/* Base responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .ios-clock-container {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .ios-clock {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .tab {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .tab-content {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+            
+            .btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .action-buttons .btn {
+                margin-bottom: 10px;
+            }
+            
+            .search-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-box input {
+                margin-bottom: 10px;
+            }
+            
+            .stats-section {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+            }
+            
+            .stats-card {
+                padding: 20px;
+            }
+            
+            .stats-card i {
+                font-size: 2rem;
+            }
+            
+            .stats-card .value {
+                font-size: 1.8rem;
+            }
+            
+            .calendar-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .calendar-grid {
+                min-width: 320px;
+            }
+            
+            .calendar-day {
+                font-size: 0.85rem;
+            }
+            
+            .student-list {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 10px;
+            }
+            
+            .student-item {
+                padding: 12px;
+            }
+            
+            .months-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .modal {
+                width: 95%;
+                max-height: 90%;
+                padding: 20px;
+            }
+            
+            .modal-header {
+                margin-bottom: 15px;
+            }
+            
+            .modal-header h3 {
+                font-size: 1.3rem;
+            }
+            
+            .toast {
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+                padding: 12px 20px;
+            }
+            
+            #assistant-container {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            #assistant-button {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            #assistant-window {
+                width: 90%;
+                max-width: 350px;
+                height: 400px;
+                bottom: 70px;
+                right: 5%;
+            }
+            
+            #assistant-messages {
+                font-size: 0.9rem;
+            }
+            
+            .assistant-suggestion {
+                font-size: 0.8rem;
+                padding: 4px 10px;
+            }
+        }
+        
+        /* Small screen adjustments */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .ios-clock {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .tab {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .stats-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-card {
+                padding: 15px;
+            }
+            
+            .stats-card i {
+                font-size: 1.8rem;
+            }
+            
+            .stats-card .value {
+                font-size: 1.6rem;
+            }
+            
+            .student-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .months-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal {
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                border-radius: 0;
+            }
+            
+            .modal-header {
+                padding-bottom: 10px;
+            }
+            
+            #assistant-window {
+                width: 95%;
+                height: 350px;
+            }
+        }
+        
+        /* Landscape adjustments */
+        @media (max-height: 500px) and (orientation: landscape) {
+            header {
+                padding: 10px 0;
+            }
+            
+            header h1 {
+                font-size: 1.4rem;
+                margin-bottom: 5px;
+            }
+            
+            .logo-container {
+                margin-right: 10px;
+            }
+            
+            .ios-clock-container {
+                margin-left: 10px;
+            }
+            
+            .ios-clock {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .tab-content {
+                padding: 15px;
+            }
+            
+            .section {
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+            
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .stats-card {
+                padding: 10px;
+            }
+            
+            .stats-card i {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            
+            .stats-card .value {
+                font-size: 1.4rem;
+                margin-bottom: 3px;
+            }
+            
+            .calendar-day {
+                font-size: 0.75rem;
+            }
+            
+            #assistant-window {
+                height: 250px;
+            }
+        }
+        
+        /* Touch-friendly adjustments */
+        @media (hover: none) and (pointer: coarse) {
+            .btn, .tab, .student-item, .calendar-day {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            .btn {
+                padding: 12px 20px;
+            }
+            
+            input, select, textarea {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+            
+            .modal-header button {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* iOS specific adjustments */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                -webkit-text-size-adjust: 100%;
+            }
+            
+            .tabs {
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .table-wrap {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+        
+        /* Android specific adjustments */
+        @media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
+            .btn {
+                font-weight: 500;
+            }
+            
+            input, select, textarea {
+                border-width: 1px;
+            }
+        }
     </style>
 </head>
 <body>
