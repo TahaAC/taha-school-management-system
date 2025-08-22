@@ -835,19 +835,19 @@ canvas {
 </div>
 </div></header>
 <div class="tabs">
-<div class="tab active" data-tab="formTab">📝 Registration</div>
-<div class="tab" data-tab="databaseTab">📚 Students</div>
-<div class="tab" data-tab="teacherTab">👨‍🏫 Teachers</div>
-<div class="tab" data-tab="attendanceTab">📅 Attendance</div>
-<div class="tab" data-tab="feeTab">💰 Fee Management</div>
-<div class="tab" data-tab="reportsTab">📊 Reports</div>
+<div class="tab active" data-tab="formTab"> Registration</div>
+<div class="tab" data-tab="databaseTab"> Students</div>
+<div class="tab" data-tab="teacherTab"> Teachers</div>
+<div class="tab" data-tab="attendanceTab"> Attendance</div>
+<div class="tab" data-tab="feeTab"> Fee Management</div>
+<div class="tab" data-tab="reportsTab"> Reports</div>
 </div>
 <!-- Registration Tab -->
 <div class="tab-content active" id="formTab">
 <h2>Student &amp; Parent Registration</h2>
 <form id="registrationForm">
 <div class="section">
-<h3>👨‍👩‍👧‍👦 Parent/Guardian Details</h3>
+<h3> Parent/Guardian Details</h3>
 <label>Full Name(s)</label>
 <input id="parentName" pattern="[A-Za-z\s\-']+" required="" title="Only letters, spaces, hyphens, and apostrophes are allowed." type="text"/>
 <div class="error-message" id="parentNameError">Please enter a valid name (letters, spaces, hyphens, apostrophes only).</div>
@@ -862,7 +862,7 @@ canvas {
 <div class="error-message" id="parentEmailError">Please enter a valid email address.</div>
 </div>
 <div class="section">
-<h3>👶 Children Details</h3>
+<h3> Children Details</h3>
 <div id="childrenContainer"></div>
 <button class="btn" id="addChildBtn" onclick="addChildForm()" type="button"><i class="fas fa-plus"></i> Add Child</button>
 </div>
@@ -1217,7 +1217,7 @@ canvas {
 </div>
 <button class="btn" onclick="addTeacher()"><i class="fas fa-plus"></i> Add Teacher</button>
 <div class="section">
-<h3>📋 Teacher List</h3>
+<h3> Teacher List</h3>
 <div class="search-box">
 <input id="teacherSearch" onkeyup="filterTeachers()" placeholder="🔍 Search teachers..." type="text"/>
 </div>
@@ -1241,7 +1241,7 @@ canvas {
 </div>
 </div>
 <div class="section">
-<h3>📅 Teacher Attendance</h3>
+<h3>Teacher Attendance</h3>
 <div class="search-box">
 <select id="teacherAttendanceSelect" onchange="selectTeacherForAttendance()">
 <option value="">Select Teacher</option>
@@ -1258,7 +1258,7 @@ canvas {
 <div class="tab-content" id="feeTab">
 <h2>Fee Management</h2>
 <div class="section">
-<h3>💰 Fee Records</h3>
+<h3> Fee Records</h3>
 <div class="search-box">
 <input id="feeSearch" onkeyup="filterFeeStudents()" placeholder="🔍 Search students by name or ID..." type="text"/>
 <button class="btn btn-success" onclick="generateFeeReport()"><i class="fas fa-file-invoice"></i> Generate Report</button>
@@ -1280,7 +1280,7 @@ canvas {
 </div>
 </div>
 <div class="section">
-<h3>➕ Add Fee Records</h3>
+<h3> Add Fee Records</h3>
 <div id="feeEntriesContainer"></div>
 <button class="btn" onclick="addFeeEntry()"><i class="fas fa-plus"></i> Add Fee Entry</button>
 <button class="btn btn-success" onclick="saveFeeRecords()"><i class="fas fa-save"></i> Save Fee Records</button>
@@ -1312,21 +1312,21 @@ canvas {
 </div>
 </div>
 <div class="section">
-<h3>📈 Fee Collection Chart</h3>
+<h3> Fee Collection Chart</h3>
 <canvas height="200" id="feeChart" width="400"></canvas>
 </div>
 <div class="section">
-<h3>📊 Student Attendance Chart</h3>
+<h3> Student Attendance Chart</h3>
 <canvas height="200" id="studentAttendanceChart" width="400"></canvas>
 </div>
 <div class="section">
-<h3>📊 Teacher Attendance Chart</h3>
+<h3>Teacher Attendance Chart</h3>
 <canvas height="200" id="teacherAttendanceChart" width="400"></canvas>
 </div>
 </div>
 <!-- Add this section to the Reports tab -->
 <div class="section">
-    <h3>📥 Export & Import Data</h3>
+    <h3> Export & Import Data</h3>
     <div class="action-buttons">
         <!-- Export Buttons -->
         <div style="margin-bottom: 15px;">
