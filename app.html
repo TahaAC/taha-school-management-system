@@ -703,6 +703,59 @@
     font-size: 1.1rem;
   }
 }
+	/* Clean Responsive Digital Clock */
+.digital-clock-container {
+  text-align: center;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  max-width: 300px;
+  width: 100%;
+}
+
+.digital-time {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.digital-date {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Responsive: Smaller on mobile */
+@media (max-width: 768px) {
+  .digital-clock-container {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    padding: 15px;
+  }
+  .digital-time {
+    font-size: 1.6rem;
+  }
+  .digital-date {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-time {
+    font-size: 1.4rem;
+  }
+  .digital-date {
+    font-size: 0.85rem;
+  }
+}
 	/* iOS Modern Theme for Reports */
 #reportsTab {
     background: #F2F2F7;
