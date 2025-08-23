@@ -221,7 +221,19 @@
   margin-bottom: 20px;
   background: white;
 }
-        table {
+    #databaseTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Ensures it doesn’t shrink too much */
+}
+
+#databaseTable th,
+#databaseTable td {
+  padding: 12px 10px;
+  text-align: left;
+  white-space: nowrap; /* Prevents text from wrapping */
+}    
+	table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
