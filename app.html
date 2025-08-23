@@ -1176,26 +1176,23 @@ canvas {
 <p>9-11 Patrona St, Dandenong VIC 3175 | Email: contact@taha.org.au</p>
 </div>
 <div class="ios-clock-container">
-<div class="ios-clock">
-<!-- Clock face with minute ticks -->
-<div class="ios-clock-face">
-<!-- Minute ticks -->
-<div class="ios-minute-marks">
-<div :key="n" class="ios-minute-mark" v-for="n in 60"></div>
-</div>
-<!-- Clock hands -->
-<div class="ios-hour-hand"></div>
-<div class="ios-minute-hand"></div>
-<div class="ios-second-hand"></div>
-<div class="ios-center-cap"></div>
-</div>
-<!-- Digital display -->
-<div class="ios-digital-display">
-<div class="ios-time"></div>
-<div class="ios-date"></div>
-</div>
-</div>
-</div>
+  <!-- Analog Clock -->
+  <div class="ios-clock">
+    <!-- Clock face, hands, etc. -->
+    <div class="ios-clock-face">
+      <div class="ios-minute-marks"></div>
+      <div class="ios-hour-hand"></div>
+      <div class="ios-minute-hand"></div>
+      <div class="ios-second-hand"></div>
+      <div class="ios-center-cap"></div>
+    </div>
+  </div>
+
+  <!-- Digital Display (Outside Clock) -->
+  <div class="ios-digital-display">
+    <div class="ios-time"></div>
+    <div class="ios-date"></div>
+  </div>
 </div></header>
 <div class="tabs">
 <div class="tab active" data-tab="formTab"> Registration</div>
