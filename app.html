@@ -5122,67 +5122,7 @@ canvas {
                 }, 3000);
             }
         }
-        function setupIOSClock() {
-            const hourHand = document.querySelector('.ios-hour-hand');
-            const minuteHand = document.querySelector('.ios-minute-hand');
-            const secondHand = document.querySelector('.ios-second-hand');
-            const timeDisplay = document.querySelector('.ios-time');
-            const dateDisplay = document.querySelector('.ios-date');
-            
-            // Create minute marks
-            const minuteMarks = document.querySelector('.ios-minute-marks');
-            if (minuteMarks) {
-                for (let i = 0; i < 60; i++) {
-                    const mark = document.createElement('div');
-                    mark.className = 'ios-minute-mark';
-                    mark.style.transform = `rotate(${i * 6}deg)`;
-                    minuteMarks.appendChild(mark);
-                }
-            }
-            
-            function updateClock() {
-                const now = new Date();
-                const hours = now.getHours();
-                const minutes = now.getMinutes();
-                const seconds = now.getSeconds();
-                
-                // Analog clock
-                const hourDegrees = (hours % 12) * 30 + (minutes * 0.5);
-                const minuteDegrees = minutes * 6;
-                const secondDegrees = seconds * 6;
-                
-                if (hourHand) {
-                    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-                }
-                if (minuteHand) {
-                    minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
-                }
-                if (secondHand) {
-                    secondHand.style.transform = `rotate(${secondDegrees}deg)`;
-                }
-                
-                // Digital clock
-                const ampm = hours >= 12 ? 'PM' : 'AM';
-                const displayHours = hours % 12 || 12;
-                if (timeDisplay) {
-                    timeDisplay.textContent = `${displayHours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
-                }
-                
-                // Date display
-                const options = { weekday: 'short', month: 'short', day: 'numeric' };
-                if (dateDisplay) {
-                    dateDisplay.textContent = now.toLocaleDateString(undefined, options);
-                }
-            }
-            
-            // Initialize clock
-            updateClock();
-            // Update every second
-            setInterval(updateClock, 1000);
-        }
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', setupIOSClock);
-        // Helper: Ensure Tuesday/Wednesday auto-absent rule
+       
         function applyAutoAbsentRule(attendanceRecord, year, month) {
             const daysInMonth = new Date(year, month + 1, 0).getDate();
             for (let d = 1; d <= daysInMonth; d++) {
