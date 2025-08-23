@@ -1871,6 +1871,34 @@ canvas {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
 <script>
+	// Update Digital Clock
+function updateDigitalClock() {
+  const now = new Date();
+  const timeDiv = document.querySelector('.digital-time');
+  const dateDiv = document.querySelector('.digital-date');
+
+  if (timeDiv && dateDiv) {
+    // Format time: 5:30 PM
+    const hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours % 12 || 12;
+    timeDiv.textContent = `${displayHours}:${minutes} ${ampm}`;
+
+    // Format date: Mon, Aug 26
+    const options = { 
+      weekday: 'short', 
+      month: 'short', 
+      day: 'numeric' 
+    };
+    dateDiv.textContent = now.toLocaleDateString(undefined, options);
+  }
+}
+
+// Run once immediately
+updateDigitalClock();
+// Update every second
+setInterval(updateDigitalClock, 1000);
         // Data Storage (Using localStorage for persistence)
         const STUDENT_DB_FILE = 'studentDatabase';
         const TEACHER_DB_FILE = 'teacherDatabase';
