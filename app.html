@@ -213,8 +213,14 @@
             margin-bottom: 0;
         }
         .table-wrap {
-            overflow-x: auto;
-        }
+  max-height: 600px;           /* Limits height */
+  overflow-y: auto;            /* Adds vertical scrollbar */
+  overflow-x: auto;            /* Adds horizontal scrollbar if needed */
+  border: 1px solid #ddd;      /* Optional: adds border */
+  border-radius: 12px;         /* Rounded corners */
+  margin-bottom: 20px;
+  background: white;
+}
         table {
             width: 100%;
             border-collapse: collapse;
