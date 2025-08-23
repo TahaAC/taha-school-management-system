@@ -1,10 +1,9 @@
 {
-  "name": "TAHA School Management System",
-  "short_name": "TAHA School",
-  "description": "School management system for TAHA Association",
-  "start_url": "./index.html",
+  "name": "TAHA Association School",
+  "short_name": "Taha School",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#4361ee",
   "theme_color": "#4361ee",
   "icons": [
     {
