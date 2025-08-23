@@ -651,7 +651,47 @@
     opacity: 0.8;
     margin-top: 5px;
 }
-/* iOS Modern Theme for Reports */
+.ios-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  gap: 10px; /* space between clock and digital */
+}
+
+.ios-clock {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50%;
+  background: #000;
+  position: relative;
+  box-shadow: 
+    0 0 0 3px rgba(255,255,255,0.1),
+    inset 0 0 10px rgba(0,0,0,0.5),
+    0 10px 20px rgba(0,0,0,0.5);
+}
+
+.ios-digital-display {
+  position: static; /* No absolute positioning */
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.ios-time {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.ios-date {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+	/* iOS Modern Theme for Reports */
 #reportsTab {
     background: #F2F2F7;
     border-radius: 20px;
