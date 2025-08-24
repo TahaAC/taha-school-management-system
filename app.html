@@ -532,236 +532,133 @@
         .logo:hover {
             transform: rotateY(0deg);
         }
- .ios-clock-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-}
-.ios-clock {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: #000;
-    position: relative;
-    box-shadow: 
-        0 0 0 4px rgba(255,255,255,0.1),
-        inset 0 0 0 3px rgba(255,255,255,0.1),
-        inset 0 0 10px rgba(0,0,0,0.5),
-        0 10px 20px rgba(0,0,0,0.5);
-}
-.ios-clock-face {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-.ios-minute-marks {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-.ios-minute-mark {
-    position: absolute;
-    width: 2px;
-    height: 6px;
-    background: #fff;
-    left: 50%;
-    top: 6px;
-    margin-left: -1px;
-    transform-origin: 50% 84px;
-    opacity: 0.7;
-}
-/* Create 60 minute marks */
-.ios-minute-mark:nth-child(5n+1) {
-    width: 3px;
-    height: 12px;
-    margin-left: -1.5px;
-    opacity: 1;
-}
-.ios-hour-hand {
-    position: absolute;
-    width: 6px;
-    height: 50px;
-    background: #fff;
-    left: 50%;
-    top: 50%;
-    margin-left: -3px;
-    margin-top: -50px;
-    border-radius: 4px;
-    transform-origin: 50% 100%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    z-index: 3;
-}
-.ios-minute-hand {
-    position: absolute;
-    width: 4px;
-    height: 70px;
-    background: #fff;
-    left: 50%;
-    top: 50%;
-    margin-left: -2px;
-    margin-top: -70px;
-    border-radius: 4px;
-    transform-origin: 50% 100%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    z-index: 2;
-}
-.ios-second-hand {
-    position: absolute;
-    width: 2px;
-    height: 80px;
-    background: #ff3b30;
-    left: 50%;
-    top: 50%;
-    margin-left: -1px;
-    margin-top: -80px;
-    border-radius: 2px;
-    transform-origin: 50% 100%;
-    z-index: 1;
-}
-.ios-center-cap {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    margin-left: -6px;
-    margin-top: -6px;
-    z-index: 4;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-.ios-digital-display {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-.ios-time {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-.ios-date {
-    font-size: 0.8rem;
-    opacity: 0.8;
-    margin-top: 5px;
-}
-.ios-clock-container {
+ /* London Tower-Style Clock */
+.london-clock-container {
+  text-align: center;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 20px;
-  gap: 10px; /* space between clock and digital */
+  gap: 8px;
 }
 
-.ios-clock {
-  width: 150px !important;
-  height: 150px !important;
-  border-radius: 50%;
-  background: #000;
+.london-clock {
+  width: 100px;
+  height: 100px;
   position: relative;
-  box-shadow: 
-    0 0 0 3px rgba(255,255,255,0.1),
-    inset 0 0 10px rgba(0,0,0,0.5),
-    0 10px 20px rgba(0,0,0,0.5);
 }
 
-.ios-digital-display {
-  position: static; /* No absolute positioning */
-  text-align: center;
-  padding: 5px 0;
+.clock-face {
   width: 100%;
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100%;
+  border-radius: 50%;
+  background: #f0f0f0;
+  border: 6px solid #333;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-.ios-time {
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+.hour-marker {
+  position: absolute;
+  width: 4px;
+  height: 12px;
+  background: #333;
+  left: 50%;
+  top: 6px;
+  transform-origin: 50% 44px;
+  border-radius: 2px;
 }
 
-.ios-date {
-  font-size: 0.8rem;
-  opacity: 0.9;
-  margin-top: 2px;
+.hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+  border-radius: 4px;
 }
-	@media (max-width: 480px) {
-  .ios-clock {
-    width: 120px !important;
-    height: 120px !important;
-  }
-  .ios-digital-display {
-    font-size: 1rem;
-  }
-  .ios-time {
-    font-size: 1.1rem;
-  }
+
+.hour-hand {
+  width: 6px;
+  height: 30px;
+  background: #333;
+  margin-left: -3px;
+  z-index: 3;
 }
-	/* Clean Responsive Digital Clock */
-.digital-clock-container {
+
+.minute-hand {
+  width: 4px;
+  height: 40px;
+  background: #555;
+  margin-left: -2px;
+  z-index: 2;
+}
+
+.second-hand {
+  width: 2px;
+  height: 45px;
+  background: #e74c3c;
+  margin-left: -1px;
+  z-index: 1;
+}
+
+.center-cap {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #e74c3c;
+  border: 1px solid #333;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.london-clock-info {
   text-align: center;
-  padding: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  max-width: 300px;
-  width: 100%;
 }
 
-.digital-time {
-  font-size: 2rem;
-  font-weight: 600;
-  color: white;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-
-.digital-date {
+.london-time {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.london-date {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 2px;
 }
 
 /* Responsive: Smaller on mobile */
 @media (max-width: 768px) {
-  .digital-clock-container {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-    padding: 15px;
+  .london-clock-container {
+    margin-left: 10px;
+    gap: 6px;
   }
-  .digital-time {
-    font-size: 1.6rem;
+  .london-clock {
+    width: 80px;
+    height: 80px;
   }
-  .digital-date {
-    font-size: 0.9rem;
+  .london-time {
+    font-size: 0.95rem;
+  }
+  .london-date {
+    font-size: 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
-  .digital-time {
-    font-size: 1.4rem;
+  .london-clock-container {
+    margin-left: 0;
+    gap: 4px;
   }
-  .digital-date {
-    font-size: 0.85rem;
+  .london-time {
+    font-size: 0.9rem;
   }
 }
-	/* iOS Modern Theme for Reports */
-#reportsTab {
-    background: #F2F2F7;
-    border-radius: 20px;
-    padding: 30px;
-}
+
 #reportsTab h2 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 1.8rem;
@@ -1266,25 +1163,58 @@ canvas {
             }
         }
     </style>
-</head>
-<body>
-<div class="container">
 <header>
-<div class="header-container">
-<div class="logo.png">
+ <div class="header-container">
+
 <div class="logo.png">
 <img alt="Logo" src="logo.png" style="width:250px; height:200px;"/>
-</div>
-</div>
-<div>
-<h1>TAHA School Management System</h1>
-<p>9-11 Patrona St, Dandenong VIC 3175 | Email: contact@taha.org.au</p>
-</div>
-<!-- Clean Digital Clock -->
-<div class="digital-clock-container">
-  <div class="digital-time"></div>
-  <div class="digital-date"></div>
-</div></header>
+    </div>
+
+    <!-- Centered Title & Address -->
+    <div class="title-container">
+      <h1>TAHA School Management System</h1>
+      <p>9-11 Patrona St, Dandenong VIC 3175 | Email: contact@taha.org.au</p>
+    </div>
+
+    <!-- Clock on Right -->
+    <div class="clock-container">
+      <div class="london-clock-container">
+        <div class="london-clock">
+          <!-- Analog Clock -->
+          <div class="clock-face">
+            <!-- Hour Markers -->
+            <div class="hour-marker" style="transform: rotate(0deg)"></div>
+            <div class="hour-marker" style="transform: rotate(30deg)"></div>
+            <div class="hour-marker" style="transform: rotate(60deg)"></div>
+            <div class="hour-marker" style="transform: rotate(90deg)"></div>
+            <div class="hour-marker" style="transform: rotate(120deg)"></div>
+            <div class="hour-marker" style="transform: rotate(150deg)"></div>
+            <div class="hour-marker" style="transform: rotate(180deg)"></div>
+            <div class="hour-marker" style="transform: rotate(210deg)"></div>
+            <div class="hour-marker" style="transform: rotate(240deg)"></div>
+            <div class="hour-marker" style="transform: rotate(270deg)"></div>
+            <div class="hour-marker" style="transform: rotate(300deg)"></div>
+            <div class="hour-marker" style="transform: rotate(330deg)"></div>
+
+            <!-- Hands -->
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+
+            <!-- Center Cap -->
+            <div class="center-cap"></div>
+          </div>
+        </div>
+
+        <!-- Digital Time & Date Below -->
+        <div class="london-clock-info">
+          <div class="london-time">12:00 PM</div>
+          <div class="london-date">Mon, Jan 1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 <div class="tabs">
 <div class="tab active" data-tab="formTab"> Registration</div>
 <div class="tab" data-tab="databaseTab"> Students</div>
@@ -6239,6 +6169,49 @@ function useSuggestion(question) {
     document.getElementById('assistant-input').value = question;
     sendAssistantMessage();
 }
+// Update London Clock Hands and Digital Display
+function updateLondonClock() {
+  const now = new Date();
+  const seconds = now.getSeconds();
+  const minutes = now.getMinutes();
+  const hours = now.getHours() % 12;
+
+  // Calculate hand rotations
+  const secondDegrees = (seconds * 6); // 360 / 60
+  const minuteDegrees = (minutes * 6) + (seconds * 0.1); // Smooth
+  const hourDegrees = (hours * 30) + (minutes * 0.5); // Smooth
+
+  // Get hands
+  const hourHand = document.querySelector('.hour-hand');
+  const minuteHand = document.querySelector('.minute-hand');
+  const secondHand = document.querySelector('.second-hand');
+  const timeDiv = document.querySelector('.london-time');
+  const dateDiv = document.querySelector('.london-date');
+
+  // Update hands
+  if (hourHand) hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+  if (minuteHand) minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
+  if (secondHand) secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+
+  // Update digital time
+  if (timeDiv) {
+    const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+    const displayHours = now.getHours() % 12 || 12;
+    const displayMinutes = minutes.toString().padStart(2, '0');
+    timeDiv.textContent = `${displayHours}:${displayMinutes} ${ampm}`;
+  }
+
+  // Update date
+  if (dateDiv) {
+    const options = { weekday: 'short', month: 'short', day: 'numeric' };
+    dateDiv.textContent = now.toLocaleDateString(undefined, options);
+  }
+}
+
+// Run once immediately
+updateLondonClock();
+// Update every second
+setInterval(updateLondonClock, 1000);
 </script>
 </body>
 </html>
